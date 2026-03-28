@@ -1,5 +1,6 @@
-# 🚀 API Documentation Middleware (CSM)
+**I had already built this project before, it was just in a repository with some problems, hence the fast commit times.**
 
+# 🚀 API Documentation Middleware (CSM)
 > Effortlessly generate structured, real-time API documentation for your Express applications.
 
 ---

@@ -6,3 +6,5 @@ export * from './sections/deleteSection.controller.js';
 
 export * from './endpoints/createEndpoint.controller.js';
 export * from './endpoints/updateEndpoint.controller.js';
+export * from './endpoints/getAllEndpoints.controller.js';
+export * from './endpoints/getEndpointById.controller.js';

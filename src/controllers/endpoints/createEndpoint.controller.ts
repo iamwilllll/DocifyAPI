@@ -1,7 +1,7 @@
 import type { Request, Response, NextFunction } from 'express';
 import { EndpointModel, SectionModel } from '@/models/index.js';
-import { AppError } from '@/errors/appError.js';
-import { ApiResponse } from '@/helpers/apiResponse.js';
+import { AppError } from '@/errors/index.js';
+import { ApiResponse } from '@/helpers/index.js';
 
 export async function createEndpointController(req: Request, res: Response, next: NextFunction) {
     try {

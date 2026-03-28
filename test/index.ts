@@ -1,5 +1,5 @@
 import express from 'express';
-import createCSM from '@/dist/index.js';
+import createCSM from '../dist/index.js';
 import mongoose from 'mongoose';
 import cors, { type CorsOptions } from 'cors';
 import 'dotenv/config.js';
@@ -17,13 +17,15 @@ const corsOptions: CorsOptions = {
         if (allowedOrigins.includes(origin)) return callback(null, true);
         return callback(new Error('Not allowed by CORS'));
     },
+
     credentials: true,
     optionsSuccessStatus: 200,
 };
 
 const app = express();
+const port = 3000;
 
 app.use(cors(corsOptions));
 app.use(createCSM({ mode: 'production' }));
 
-app.listen(3000, () => console.log('Server running on http://localhost:3000'));
+app.listen(port, () => console.log(`Server running on http://localhost:${port}`));

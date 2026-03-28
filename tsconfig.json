@@ -1,6 +1,7 @@
 {
     "include": ["./src"],
     "compilerOptions": {
+        "ignoreDeprecations": "6.0",
         "rootDir": "./src",
         "outDir": "./dist",
         "module": "nodenext",
@@ -15,6 +16,10 @@
         "verbatimModuleSyntax": true,
         "isolatedModules": true,
         "moduleDetection": "force",
-        "skipLibCheck": true
+        "skipLibCheck": true,
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["src/*"]
+        }
     }
 }

@@ -5,4 +5,9 @@ export type CSMConfig = {
      * - production: read-only
      */
     mode?: 'development' | 'production';
+
+    /*
+     * Title for the API documentation.
+     */
+    title?: string;
 };

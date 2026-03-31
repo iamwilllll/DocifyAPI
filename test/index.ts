@@ -1,5 +1,5 @@
 import express from 'express';
-import createCSM from '../dist/index.js';
+import DocifyApi from '../dist/index.js';
 import mongoose from 'mongoose';
 import cors, { type CorsOptions } from 'cors';
 import 'dotenv/config.js';
@@ -26,6 +26,6 @@ const app = express();
 const port = 3000;
 
 app.use(cors(corsOptions));
-app.use(createCSM({ mode: 'production' }));
+app.use(DocifyApi({ mode: 'development', title: 'My API Documentation' }));
 
 app.listen(port, () => console.log(`Server running on http://localhost:${port}`));

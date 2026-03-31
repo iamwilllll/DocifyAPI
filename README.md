@@ -1,6 +1,7 @@
 **I had already built this project before, it was just in a repository with some problems, hence the fast commit times.**
 
 # 🚀 API Documentation Middleware (CSM)
+
 > Effortlessly generate structured, real-time API documentation for your Express applications.
 
 ---
@@ -26,13 +27,13 @@ Built with simplicity and flexibility in mind, CSM integrates seamlessly into yo
 ## 📦 Installation
 
 ```bash
-npm install @wilfrynvil/api-documentation
+npm install docify-api
 ```
 
 or
 
 ```bash
-pnpm add @wilfrynvil/api-documentation
+pnpm add docify-api
 ```
 
 ---
@@ -59,7 +60,7 @@ MONGO_URL=your_mongodb_connection_string
 
 ```ts
 import express from 'express';
-import createCSM from '../dist/index.js';
+import DocifyApi from 'docify-api';
 import mongoose from 'mongoose';
 import cors, { type CorsOptions } from 'cors';
 import 'dotenv/config.js';
@@ -84,7 +85,7 @@ const corsOptions: CorsOptions = {
 const app = express();
 
 app.use(cors(corsOptions));
-app.use(createCSM({ mode: 'development' }));
+app.use(DocifyApi({ mode: 'development', title: 'My API Documentation' }));
 
 app.listen(3000, () => console.log('Server running on http://localhost:3000'));
 ```

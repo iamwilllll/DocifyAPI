@@ -7,7 +7,7 @@ import appRouter from '@/routes/index.js';
 import fs from 'node:fs';
 import { errorMiddleware } from '@/middlewares/index.js';
 
-function createCSM(config: CSMConfig): Router {
+function DocifyApi(config: CSMConfig): Router {
     const router = Router();
 
     const __filename = fileURLToPath(import.meta.url);
@@ -22,6 +22,7 @@ function createCSM(config: CSMConfig): Router {
         return ApiResponse.success(res, 200, 'Mode retrieved successfully', {
             mode: mode || 'development',
             routePath: '/documentation',
+            title: config.title || 'My API Documentation',
         });
     });
 
@@ -63,4 +64,4 @@ function createCSM(config: CSMConfig): Router {
     return router;
 }
 
-export default createCSM;
+export default DocifyApi;

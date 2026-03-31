@@ -7,13 +7,13 @@ import appRouter from '@/routes/index.js';
 import fs from 'node:fs';
 import { errorMiddleware } from '@/middlewares/index.js';
 
-function DocifyApi(config: CSMConfig): Router {
+function DocifyApi(config?: CSMConfig): Router {
     const router = Router();
 
     const __filename = fileURLToPath(import.meta.url);
     const __dirname = path.dirname(__filename);
     const pathToDist = path.join(__dirname, 'static');
-    const mode = config.mode;
+    const mode = config?.mode;
 
     router.use(express.json());
 
@@ -22,7 +22,7 @@ function DocifyApi(config: CSMConfig): Router {
         return ApiResponse.success(res, 200, 'Mode retrieved successfully', {
             mode: mode || 'development',
             routePath: '/documentation',
-            title: config.title || 'My API Documentation',
+            title: config?.title || 'My API Documentation',
         });
     });
 

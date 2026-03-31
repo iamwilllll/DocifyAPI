@@ -26,6 +26,6 @@ const app = express();
 const port = 3000;
 
 app.use(cors(corsOptions));
-app.use(DocifyApi({ mode: 'development', title: 'My API Documentation' }));
+app.use(DocifyApi());
 
 app.listen(port, () => console.log(`Server running on http://localhost:${port}`));

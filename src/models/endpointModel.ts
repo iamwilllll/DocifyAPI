@@ -14,9 +14,9 @@ const EndpointSchema = new Schema<EndpointT>(
         URL: { type: String, required: true },
         description: { type: String, required: false },
         jsonSchema: { type: Object, required: false },
-        section: { type: Schema.Types.ObjectId, ref: 'ApidocSection', required: true },
+        section: { type: Schema.Types.ObjectId, ref: 'DocifyAPI_sections', required: true },
     },
     { timestamps: true, versionKey: false }
 );
 
-export const EndpointModel = mongoose.model<EndpointT>('ApidocEndpoint', EndpointSchema);
+export const EndpointModel = mongoose.model<EndpointT>('DocifyAPI_endpoints', EndpointSchema);

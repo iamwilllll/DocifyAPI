@@ -7,8 +7,8 @@ export async function createSectionController(req: Request, res: Response, next:
     try {
         const { sectionName, sectionDescription } = req.body;
 
-        if (!sectionName || !sectionDescription) {
-            throw new AppError('Section name and description are required', 400, 'INVALID_INPUT');
+        if (!sectionName) {
+            throw new AppError('Section name is required', 400, 'INVALID_INPUT');
         }
 
         const newSection = await SectionModel.create({ sectionName, sectionDescription });

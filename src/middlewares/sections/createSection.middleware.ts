@@ -7,10 +7,6 @@ export const createSectionMiddleware = [
         .withMessage('Section name is required')
         .isString()
         .withMessage('Section name must be a string'),
-    body('sectionDescription')
-        .notEmpty()
-        .withMessage('Section description is required')
-        .isString()
-        .withMessage('Section description must be a string'),
+    body('sectionDescription').optional(),
     handleInputErrors,
 ];

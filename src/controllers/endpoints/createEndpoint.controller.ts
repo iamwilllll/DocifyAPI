@@ -17,7 +17,7 @@ export async function createEndpointController(req: Request, res: Response, next
             method,
             URL,
             description,
-            jsonSchema: jsonSchema ? jsonSchema : {},
+            jsonSchema: jsonSchema,
             section: sectionId,
         });
 

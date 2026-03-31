@@ -12,6 +12,8 @@
 
 Built with simplicity and flexibility in mind, CSM integrates seamlessly into your backend and exposes a clean documentation endpoint with almost zero configuration.
 
+
+
 ---
 
 ## ⚡ Why CSM?
